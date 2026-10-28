@@ -63,4 +63,4 @@ WCAG 条款号（`（SC x.y.z）`）的**唯一登记处**是 upstream 基线：
 
 ## License
 
-MIT-0（见 `LICENSE`）。
+MIT（见 `LICENSE`）。

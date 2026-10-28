@@ -1,9 +1,9 @@
 ---
 name: accessibility
 description: 无障碍体验优化。支持 Flutter、iOS、Android、Web/H5 多平台，提供 WCAG 合规检查、语义化、键盘导航、焦点管理、屏幕阅读器适配的审计与修复指导。Use when 无障碍，可访问性，a11y，键盘导航，屏幕阅读器，WCAG，读屏适配，焦点管理，VoiceOver，TalkBack，Semantics，或 making UI accessible. App Store 无障碍标签 / Nutrition Labels / 上线前无障碍自检，仅做无障碍专项；不用于通用视觉设计/美化（Web 用 frontend-design、App 用 app-design）、不用于代码正确性审查（用 review）。
-license: MIT-0
+license: MIT
 metadata:
-  version: "1.3.1"
+  version: "1.3.2"
   platforms: "flutter,ios,android,web"
   last-updated: "2026-10-28"
 ---
@@ -169,9 +169,10 @@ metadata:
 
 ## 维护说明
 
-- 版本：1.3.1（2026-10-28），与 `~/.config/opencode/design-spec/references/ui-design-philosophy.md`（配套 v2.4.15）｜个人维护，季度 review
+- 版本：1.3.2（2026-10-28），与上游 `design-spec` 仓的 `references/ui-design-philosophy.md`（配套 v2.4.15）｜本机挂载 `~/.config/opencode/design-spec/`｜个人维护，季度 review
 - 标准口径：以 WCAG 2.2 AA 为基准（唯一基线在哲学层 §无障碍基线，本文件只引用不重述）；不引入外部 references，自包含
 - 条款号登记与落点：哲学层 §无障碍基线 是 SC 号的唯一登记处（`standards` 断言：未登记的 `（SC x.y.z）` 一律 rc=1），本目录各平台清单必须为每个登记号提供落点（`standards` **逐平台**点名缺失项，info 不判红）。已落点（17）：3.2.6 帮助入口相对顺序 / 3.3.1 错误识别 / 3.3.2 标签或说明 / 3.3.3 错误建议 / 3.3.4 错误预防 / 3.3.7 不重复输入 / 1.4.1 不单靠颜色 / 1.1.1 非文本内容 / 2.1.1 键盘可达 / 4.1.2 名称角色值 / 2.4.7 焦点可见 / 2.4.11 焦点不被遮挡 / 2.5.7 不能只靠拖拽 / 2.5.8 最小目标 24×24 / 3.3.8 认证不靠认知测试 / 2.3.3 减弱动效 / 4.1.3 状态消息可播报
+- v1.3.2：许可证改 **MIT**（`LICENSE` 正文 + frontmatter `license`，README 同步）；维护说明的基线引用改为「上游 design-spec 仓 + 本机挂载路径」两段式，公开仓库读者可定位；历史行里的本机路径按「历史行不改写」保留；条文、SC 号、锚位未动
 - v1.3.1：ios.md 标签节补全 7 项细则（VoiceOver / Voice Control / Dark Interface / Differentiate / Reduced Motion / Captions / Audio Descriptions）——按 Apple 9 页 evaluation criteria 全量直读，新增「支持设备」列与「逐项细则」小节（含 Indicating support 判据、Smart Invert 反转、灰度走查、三方内容「库内几乎无内容不得标支持」）；不引新 SC 号、不动基线；原文快照 `docs/plan/apple-accessibility-nutrition-labels-20261028.md`
 - v1.3.0：ios.md 新增 App Store 无障碍营养标签上线自检（common tasks 总则、按设备评估、≥200% 与 4.5:1/3:1 硬口径、9 项三态结论）；换挂顶级节、与 §4 互指去重；动主流程 3 处（description 关键词、步骤1 路由、模板可选节）属「入口可达性」例外；不动基线、不新增 SC 号
 - v1.2.0：新增取证分级（静态/自动化/真机）、受影响用户优先、9 列问题表 + 状态行 + 设备验证清单 + 残留风险、修复后复验（最多 2 轮）、不做合规结论与 `[待核]` 标记、四平台验证建议补可执行命令；四平台各补 4 处落点（1.1.1 / 2.1.1 / 4.1.2 / 2.4.7），基线 13→17，配套哲学层 v2.4.15
